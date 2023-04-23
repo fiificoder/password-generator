@@ -26,7 +26,7 @@ func main() {
 
 }
 
-/* basically I realized another simple sequence of doing it
+/* basically I realized another simple sequence of doing it:
 
 func main() {
 	password := make([]byte, 10)
