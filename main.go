@@ -9,10 +9,10 @@ import (
 func passwordGenerator(length int) string {
 	rand.Seed(time.Now().UnixNano())
 
-	charset := "dscabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-=_+"
+	charset := "dscabcdefghijklmnofvjasevfvbufayvpqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-=_+"
 
 	password := make([]byte, length)
-	for k, _ := range password {
+	for k := range password {
 		password[k] = charset[rand.Intn(len(charset))]
 	}
 
