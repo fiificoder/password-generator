@@ -6,12 +6,12 @@ import (
 	"time"
 )
 
-func passwordGenerator(length int) string {
+func passwordGenerator() string {
 	rand.Seed(time.Now().UnixNano())
 
 	charset := "dscabcdefghijklmnofvjasevfvbufayvpqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-=_+"
 
-	password := make([]byte, length)
+	password := make([]byte, 10)
 	for k := range password {
 		password[k] = charset[rand.Intn(len(charset))]
 	}
@@ -25,15 +25,3 @@ func main() {
 	fmt.Println("Password:", passcode)
 
 }
-
-/* basically I realized another simple sequence of doing it:
-
-func main() {
-	password := make([]byte, 10)
-
-	rand.Seed(time.Now().UnixNano())
-	rand.Read(password)
-
-	fmt.Printf("password: %x", password)
-}
-*/
