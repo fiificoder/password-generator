@@ -9,3 +9,7 @@ func main() {
 
 	fmt.Printf("password: %x", password)
 }
+
+This sequence uses the math/rand package which generates random numbers
+The read function provided by the rand package is used to fill the slice with values
+
