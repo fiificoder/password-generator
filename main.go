@@ -20,8 +20,8 @@ func passwordGenerator() string {
 }
 
 func main() {
-	passcode := passwordGenerator(9)
+	passcode := passwordGenerator()
 
-	fmt.Println("Password:", passcode)
+	fmt.Println("Suggested password:", passcode)
 
 }
